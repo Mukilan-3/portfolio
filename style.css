@@ -1,0 +1,22 @@
+body{
+    font-family: "Times";
+    font-weight: 800;
+}
+u{
+    color:blue;
+    font-family: "Georgia";
+}
+.nav-link{
+    font-size: larger;
+}
+h3{
+    font-weight: bold;
+}
+abbr{
+    text-decoration: underline;
+}
+li p{
+    font-family: "Times New Roman";
+    font-size: large;
+    color:green;
+}
