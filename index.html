@@ -7,14 +7,15 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="style.css" rel="stylesheet">
     </head>
-    <body class="container">
+    <body class="container-xxl">
         <main>
+            <div id="header">
             <div id="in" class="text-center my-4">
-                <h1 class="display-4 text-primary"><b>Mukilan R</b></h1>
+                <h1 class="head display-4 "><b>Mukilan R</b></h1>
                 <p class="lead">
-                    Hello! I am <u>Mukilan R</u>, a budding web developer with a passion for creating interactive and user-friendly websites.
+                    Hello! I am Mukilan R, a budding web developer with a passion for creating interactive and user-friendly websites. I thrive on bringing creative ideas to life through clean, efficient code and innovative design. My journey in web development has equipped me with a solid foundation in HTML, CSS, JavaScript, and responsive design principles.
                 </p>
-                <img src="image/IMG-20230827-WA0001.jpg" class="rounded-circle" width="150" height="150" alt="Mukilan R">
+                <img src="image/image.jpg" class="avatar rounded-circle" width="150" height="150" id="avatar" alt="Mukilan R">
             </div>
             <ul class="nav justify-content-center mb-4">
                 <li class="nav-item">
@@ -34,6 +35,8 @@
                 </li>
             </ul>
             <hr>
+            </div>
+            
             <div id="edu1" class="mb-4">
                 <h3 class="mb-3 text-primary">Education</h3>
                 <dl class="row">
@@ -68,12 +71,51 @@
             <div id="sk1" class="mb-4">
                 <h3 class="mb-3 text-primary">Skills</h3>
                 <ul class="list-group">
-                    <li class="list-group-item"><p>HTML:</p> Markup language for creating web pages</li>
-                    <li class="list-group-item"><p>CSS:</p> Stylesheet language for designing web pages</li>
-                    <li class="list-group-item"><p>JavaScript: </p>Scripting language for creating dynamic web content</li>
-                    <li class="list-group-item"><p>Python: </p>High-level programming language for general-purpose programming</li>
+                    <li class="list-group-item">
+                        <p>HTML:</p>
+                        Markup language for creating web pages
+                        <div class="progress">
+                            <div class="progress-bar" data-percentage="90"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <p>CSS:</p>
+                        Stylesheet language for designing web pages
+                        <div class="progress">
+                            <div class="progress-bar" data-percentage="85"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <p>JavaScript:</p>
+                        Scripting language for creating dynamic web content
+                        <div class="progress">
+                            <div class="progress-bar" data-percentage="75"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Python:</p>
+                        High-level programming language for general-purpose programming
+                        <div class="progress">
+                            <div class="progress-bar" data-percentage="90"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Java:</p>
+                        High-level programming language for general-purpose programming
+                        <div class="progress">
+                            <div class="progress-bar" data-percentage="75"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Sql:</p>
+                        Structured Query Language for database handling.
+                        <div class="progress">
+                            <div class="progress-bar" data-percentage="75"></div>
+                        </div>
+                    </li>
                 </ul>
             </div>
+            
             <hr>
             <div id="pr" class="mb-4">
                 <h3 class="mb-3 text-primary">Projects</h3>
@@ -94,6 +136,9 @@
             <ul class="list-group mb-4">
                 <li class="list-group-item">Good speaker in Tamil and English</li>
                 <li class="list-group-item">Type Writing (English)</li>
+                <li class="list-group-item">Hardworker</li>
+                <li class="list-group-item">Problem solving skills</li>
+                <li class="list-group-item">Fast and ease learner</li>
             </ul>
             <hr>
             <h3 class="mb-3 text-primary">Certifications</h3>
@@ -101,6 +146,12 @@
                 <li class="list-group-item">Internships on <abbr title="Artificial Intelligence">AI</abbr> and <abbr title="User Interface and User Experience">UI/UX</abbr></li>
                 <li class="list-group-item">NPTEL course (Designing of Human-Computer Interface) with <u>Elite</u></li>
                 <li class="list-group-item">Currently pursuing a Fullstack course at CSC Institute</li>
+            </ul>
+            <hr>
+            <h3 class="mb-3 text-primary">Other Details</h3>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Click this link to get my CV</li>
+                <li class="list-group-item">Click this link to get my CV</li>
             </ul>
             <hr>
             <div id="c1" class="mb-4">
@@ -126,5 +177,37 @@
             </footer>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            const avatar = document.getElementById('avatar');
+    
+            avatar.addEventListener('click', function() {
+                avatar.classList.toggle('flip-horizontal');
+            });
+
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const percentage = bar.getAttribute('data-percentage');
+                bar.style.width = percentage + '%';
+            } else {
+                entry.target.style.width = '0%'; // Reset to 0% when out of view
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the element is in view
+    });
+
+    progressBars.forEach(bar => {
+        observer.observe(bar);
+    });
+});
+
+
+        </script>
     </body>
 </html>
