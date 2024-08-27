@@ -42,7 +42,8 @@ li p{
     border-radius: 10px;
 }
 #header p{
-    padding:50px;
+    padding-left:50px;
+    padding-right:50px;
 }
 
 .head{
