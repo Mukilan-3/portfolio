@@ -40,8 +40,11 @@ li p{
     background-color:rgb(33, 244, 118);
     color:white;
     border-radius: 10px;
+}
+#header p{
     padding:50px;
 }
+
 .head{
     text-shadow: 3px 3px 3px green;
 }
