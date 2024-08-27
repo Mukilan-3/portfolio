@@ -45,6 +45,9 @@ li p{
     padding-left:50px;
     padding-right:50px;
 }
+#header h1{
+     padding-top:10px;
+}
 
 .head{
     text-shadow: 3px 3px 3px green;
